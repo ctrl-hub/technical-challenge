@@ -10,7 +10,7 @@ The API is a simple domain. It allows clients to submit exposure to equipment th
 
 If you are unfamiliar with HAVS, there is some background information from the [HSE](https://www.hse.gov.uk/vibration/hav/index.htm) you can read.
 
-The general business premise is that we have users who use equipment items on a daily basis. Different equipment has differnt  vibration magnitudes that, depending on the duration of use, contribute to the HAVS score of a user. There are two numbers that we care about when summarising a user's exposure - the "Partial Exposure Points" and the "Partial Exposure A(8)".
+The general business premise is that we have users who use equipment items on a daily basis. Different equipment has different  vibration magnitudes that, depending on the duration of use, contribute to the HAVS score of a user. There are two numbers that we care about when summarising a user's exposure - the "Partial Exposure Points" and the "Partial Exposure A(8)".
 
 So that you do not need to reverse engineer the calculations the HSE look for, here is the calculation expressed as a function which you may choose to use as is, or move to a more appropriate location in your codebase (for example, as a method on your `Exposure` entity). Both of these functions take two parameters - the vibration magnitude of the equipment item being used (measured in ms/2), and the duration of use (measured in minutes):
 
@@ -62,7 +62,7 @@ Whilst not specified, please give some consideration to how the solution would f
 
 ## Frameworks vs stdlib
 
-Whilst we always prefer to be as close to stdlib as possible, for the purposes of this test, feel free to include frameworks and libraries that can help. The main constraint of this challenge is time, and we acknowledge that adopting third party libraries may have an impact on performance. We are more interested in exploring your approach to solving the domain issues.
+Whilst we always prefer to be as close to stdlib as possible, for the purposes of this test, feel free to include frameworks and libraries that can help. The main constraint of this challenge is time, and we acknowledge that adopting third party libraries may have an impact on performance. We are more interested in exploring your approach to solving the domain issues than to the "pureness" of the solution.
 
 ## Final thoughts
 

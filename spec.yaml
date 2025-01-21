@@ -120,21 +120,25 @@ components:
           format: uuid
           examples:
             - "e8f7b50c-cc18-42f9-a275-0b4ead73f806"
-        equipment_id:
-          type: string
-          format: uuid
-          examples:
-            - "2e85d43d-dd9b-4e8d-b2ce-97b8d7d69d49"
+        equipment:
+          $ref: "#/components/schemas/EquipmentItem"
         duration:
           type: integer
           description: The duration of the exposure (in minutes)
           examples:
             - 5
-        user_id:
-          type: string
-          format: uuid
+        a8:
+          type: number
+          description: The A8 value for the exposure
           examples:
-            - "713be58e-0d79-4df2-a85c-9f44ca513a7d"
+            - 1.25
+        points:
+          type: number
+          description: The partial exposure of points
+          examples:
+            - 25.1
+        user:
+          $ref: "#/components/schemas/User"
     ExposureSummary:
       type: object
       properties:
@@ -162,3 +166,22 @@ components:
           type: string
           examples:
             - "Bobby Tables"
+    EquipmentItem:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          examples:
+            - "2e85d43d-dd9b-4e8d-b2ce-97b8d7d69d49"
+            - "36603447-2f30-41b1-a908-526c0b6f1755"
+        name:
+          type: string
+          examples:
+            - "AirCat - Drill - 4337"
+            - "JCB - Hydraulic Breaker - CEJCBHM25"
+        vibration_magnitude:
+          type: number
+          examples:
+            - 2.1
+            - 4.0
